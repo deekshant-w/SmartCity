@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+div {
+  border-width:5px ;
+  border-style:ridge;
+  background-color: black;
+  background-image: url('/static/2.png');
+  background-repeat: no-repeat;
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+}
+h1{
+  color: red;
+  font-family: arial;
+  font-size: 150%;
+  font-weight:bold;
+
+}
+p{
+  color: blue;
+  font-family: courier;
+  font-size: 120%;
+}
+body  {
+  background-image: url('/static/2.jpg');
+  background-color: #cccccc;
+}
+</style>
+    <meta charset="utf-8">
+    <title>Records</title>
+  </head>
+  <body>
+    {% for x in data %}
+      <div><h1>Dated : {{ x.date }} &nbsp &nbsp &nbsp &nbsp Time : {{x.time}}</h1><p>Status : {{ x.status }}</p><p>Details : {{ x.data }}</p></div><br>
+    {% endfor %}
+  </body>
+</html>
